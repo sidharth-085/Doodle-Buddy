@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutDrawingView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/background_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/colorBar"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/importedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <my.app.kidsDrawingApp.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/colorBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintTop_toBottomOf="@id/frameLayoutDrawingView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tools">
+
+        <ImageButton
+            android:id="@+id/redColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="@color/red"
+            android:background="@drawable/normal_color_outline"
+            android:src="@drawable/red_color"
+            android:layout_margin="5dp"/>
+
+        <ImageButton
+            android:id="@+id/blueColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="@color/blue"
+            android:src="@drawable/blue_color"
+            android:background="@drawable/normal_color_outline"
+            android:layout_margin="5dp" />
+
+        <ImageButton
+            android:id="@+id/greenColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="@color/green"
+            android:src="@drawable/green_color"
+            android:background="@drawable/normal_color_outline"
+            android:layout_margin="5dp" />
+
+        <ImageButton
+            android:id="@+id/yellowColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="@color/yellow"
+            android:src="@drawable/yellow_color"
+            android:background="@drawable/normal_color_outline"
+            android:layout_margin="5dp" />
+
+        <ImageButton
+            android:id="@+id/orangeColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="@color/orange"
+            android:src="@drawable/orange_color"
+            android:background="@drawable/normal_color_outline"
+            android:layout_margin="5dp" />
+
+        <ImageButton
+            android:id="@+id/blackColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="@color/black"
+            android:src="@drawable/black_color"
+            android:background="@drawable/normal_color_outline"
+            android:layout_margin="5dp" />
+
+        <ImageButton
+            android:id="@+id/violetColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="@color/violet"
+            android:src="@drawable/violet_color"
+            android:background="@drawable/normal_color_outline"
+            android:layout_margin="5dp" />
+
+        <ImageButton
+            android:id="@+id/navyColor"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="@color/navy"
+            android:src="@drawable/navy_color"
+            android:background="@drawable/normal_color_outline"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintTop_toBottomOf="@id/colorBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="4dp"
+        android:background="@drawable/selected_color_outline">
+        <ImageButton
+            android:id="@+id/btnBrushSizeSelector"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/normal_color_outline"
+            android:src="@drawable/brush"
+            android:scaleType="center"
+            app:layout_constraintTop_toBottomOf="@id/colorBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnEraser"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/eraser"
+            android:background="@drawable/normal_color_outline"
+            app:layout_constraintTop_toBottomOf="@id/colorBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/undoBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/undo"
+            android:background="@drawable/normal_color_outline"
+            app:layout_constraintTop_toBottomOf="@id/colorBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/redoBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/redo"
+            android:background="@drawable/normal_color_outline"
+            app:layout_constraintTop_toBottomOf="@id/colorBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/galleryBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/normal_color_outline"
+            android:src="@drawable/gallery_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/colorBar" />
+
+        <ImageButton
+            android:id="@+id/saveToGalleryBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/save_to_gallery"
+            android:background="@drawable/normal_color_outline"
+            app:layout_constraintTop_toBottomOf="@id/colorBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
