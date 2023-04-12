@@ -2,17 +2,14 @@
 
 This is a basic drawing app for kids, built using Kotlin and Android Studio. The app allows users to draw anything they like using different colors and brush sizes. Users can also import images from their gallery and use them as backgrounds for their drawings. Once finished, users can save their drawings to their gallery for later viewing.
 
-Features: 
--> Drawing canvas with brush size and color options.
--> Import images from gallery to use as background.
--> Save drawings to gallery for later viewing.
--> Simple and easy-to-use interface designed for kids.
+Features: Drawing canvas with brush size and color options. 
+Import images from gallery to use as background.
+Save drawings to gallery for later viewing.
+Simple and easy-to-use interface designed for kids.
 
-Technologies Used
--> Kotlin
--> Android Studio
+Technologies Used: Kotlin, Android Studio.
 
-Installation
+Installation:
 To install the app, simply download the APK file from the releases section and install it on your Android device. The app should work on any device running Android 5.0 and above.
 
 Usage: 
